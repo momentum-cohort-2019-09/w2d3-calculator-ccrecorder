@@ -16,19 +16,40 @@
 // const deciButt = document.querySelector('#deciButt');
 // const equaButt = document.querySelector('#equaButt');
 
+const invertSign = document.querySelector('.invertSign');
+const enter = document.querySelector('.enter');
+const allClear = document.querySelector('.allClear');
+const clear = document.querySelector('.clear');
 const display = document.querySelector('#outputWindow');
 const numbersAndOps = document.querySelectorAll('.math');
 let disMath = '';
-// console.log(numbersAndOps); this returns empty
 
 for (let digit of numbersAndOps) {
 	digit.addEventListener('click', function(event) {
 		display.innerText += digit.innerText;
 		disMath += digit.innerText;
-		console.log(disMath);
 	});
 }
-console.log(disMath);
+
+allClear.addEventListener('click', function(event) {
+	display.innerText = '';
+	disMath = '';
+});
+
+// NOT WORKING
+// clear.addEventListener('click', function(event) {
+// 	display = display.substring(0, display.length - 1);
+// 	disMath = disMath.slice(0, -1);
+// });
+
+enter.addEventListener('click', function(event) {
+	let answer = eval(disMath);
+	display.textContent = answer;
+});
+
+// invertSign.addEventListener('click', function(event) {
+//     Math.abs
+// })
 
 // butt7.addEventListener('click', function(event) {
 // 	const newNumber = document.createElement('p');
