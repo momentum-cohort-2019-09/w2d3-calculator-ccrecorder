@@ -37,10 +37,10 @@ allClear.addEventListener('click', function(event) {
 });
 
 // NOT WORKING
-// clear.addEventListener('click', function(event) {
-// 	display = display.substring(0, display.length - 1);
-// 	disMath = disMath.slice(0, -1);
-// });
+clear.addEventListener('click', function(event) {
+	display = display.substr(0, display.length - 1);
+	disMath = disMath.slice(0, -1);
+});
 
 enter.addEventListener('click', function(event) {
 	let answer = eval(disMath);
