@@ -83,6 +83,10 @@ body {
 	visibility: hidden;
 }
 
+.invis {
+	display: none;
+}
+
 p {
 	margin: 0;
 	position: absolute;
