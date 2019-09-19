@@ -19,7 +19,7 @@
 const display = document.querySelector('#outputWindow');
 const numbersAndOps = document.querySelectorAll('.math');
 let disMath = '';
-// console.log(numbersAndOps);
+// console.log(numbersAndOps); this returns empty
 
 for (let digit of numbersAndOps) {
 	digit.addEventListener('click', function(event) {
